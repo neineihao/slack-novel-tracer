@@ -20,7 +20,6 @@ def send_massege(channel, message="Hello from Python! :tada:"):
 
 def main():
     texts = find_update()
-    print("run code")
     if texts:
         for text in texts:
             send_massege(general_id, message=text)
@@ -30,5 +29,5 @@ def main():
 
 
 if __name__ == '__main__':
-    scheduler.add_job(main, 'interval', minutes=1)
+    scheduler.add_job(main, 'interval', minutes=15)
     scheduler.start()
